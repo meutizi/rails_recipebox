@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
 gem 'pg'
+gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -23,6 +24,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'sass'
 gem 'bower-rails'
+gem 'foreman'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -49,3 +51,8 @@ group :development, :test do
   gem "selenium-webdriver"
 end
 
+group :production, :staging do
+  gem "rails_12factor"
+  gem "rails_stdout_logging"
+  gem "rails_serve_static_assets"
+end
