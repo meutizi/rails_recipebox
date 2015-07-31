@@ -1,0 +1,7 @@
+baked:
+    name: baked potato
+    instructions: text 1
+    
+boiled:
+    name: boiled potato
+    instructions: text 2
