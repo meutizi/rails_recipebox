@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sass'
 gem 'bower-rails'
 gem 'foreman'
+gem 'angular_rails_csrf'
 
 #bug with current angular-rails-templates and sprockets, so manually change sprockets to 2.12.3 via bundle update sprockets command.
 gem 'angular-rails-templates'

@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     
-    function recipeController($routeParams, $location, $resource) {
+    function recipesController($routeParams, $location, $resource) {
         /* jshint validthis: true */
         var self = this;
         self.recipes = [];
@@ -12,7 +12,8 @@
         });
         
         self.search = search;
-
+        self.view = view;
+        
         activate();
         
         function search(keyword) {
@@ -33,9 +34,13 @@
                 });
             }
         }
+        
+        function view(recipeId) {
+            $location.path("/recipes/" + recipeId)
+        }
     }
 
-    angular.module('recipe_box.controllers').controller('RecipesController', recipeController);
-    recipeController.$inject = ['$routeParams', '$location', '$resource'];
+    angular.module('recipe_box.controllers').controller('RecipesController', recipesController);
+    recipesController.$inject = ['$routeParams', '$location', '$resource'];
     
 })();
